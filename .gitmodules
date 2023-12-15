@@ -1,0 +1,4 @@
+[submodule "CICD"]
+	path = CICD
+	url = https://github.com/CHOONGRAE/blog_submodule.git
+	branch = CICD/client
