@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: "standalone",
+  output: 'standalone',
   async rewrites() {
-    console.log(process.env.NODE_ENV);
-    if (process.env.NODE_ENV !== "production") {
+    console.log(process.env.NODE_ENV)
+    if (process.env.NODE_ENV !== 'production') {
       return [
         {
-          source: "/api/:path",
-          destination: "http://localhost:3001/:path",
+          source: '/api/:path',
+          destination: 'http://localhost:3001/:path',
         },
-      ];
+      ]
     } else {
-      return [];
+      return []
     }
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
