@@ -1,9 +1,8 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
 import StyledComponentsRegistry from '@/lib/StyledComponentsRegistry'
+import globalFonts from '@/lib/fonts'
 
-const inter = Inter({ subsets: ['latin'] })
+import '@/styles/globals/index.css'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={globalFonts.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
