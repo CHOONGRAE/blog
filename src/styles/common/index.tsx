@@ -1,15 +1,21 @@
 import { css } from 'styled-components'
 
-type Props = {
-  [key: string]: string | number | boolean | undefined
+export interface MarginAndPaddingProps {
+  $margin?: string
+  $padding?: string
+}
+
+export interface WidthAndHeightProps {
   $width?: string | number
   $min_height?: string | number
   $max_height?: string | number
   $height?: string | number
   $min_width?: string | number
   $max_width?: string | number
-  $margin?: string
-  $padding?: string
+}
+
+interface Props extends MarginAndPaddingProps, WidthAndHeightProps {
+  [key: string]: string | number | boolean | undefined
 }
 
 const makeCommonStyles = ({

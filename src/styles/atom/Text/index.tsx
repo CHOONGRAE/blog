@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import makeCommonStyles from '@/styles/common'
+import makeCommonStyles, { MarginAndPaddingProps } from '@/styles/common'
 
 type PossibleAs =
   | 'h1'
@@ -22,12 +22,10 @@ type PossibleVariant =
   | 'p-base'
   | 'p-small'
 
-export interface Props {
+export interface Props extends MarginAndPaddingProps {
   as?: PossibleAs
   $variant?: PossibleVariant
   $color?: string
-  $margin?: string
-  $padding?: string
   $truncate?: boolean
   $truncateLines?: number
 }
