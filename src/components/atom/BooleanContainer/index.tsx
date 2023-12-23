@@ -1,7 +1,7 @@
 'use client'
 
 import { Children, cloneElement, useState } from 'react'
-import * as S from '@/styles/common/Container/BooleanContainer'
+import * as S from '@/styles/atom/BooleanContainer'
 
 interface BooleanContainerProps {
   children: React.ReactElement

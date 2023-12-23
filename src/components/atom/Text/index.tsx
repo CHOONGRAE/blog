@@ -1,6 +1,6 @@
 'use client'
 
-import * as S from '@/styles/common/Text'
+import * as S from '@/styles/atom/Text'
 
 interface TextProps extends S.Props {
   children?: React.ReactNode

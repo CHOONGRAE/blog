@@ -16,7 +16,6 @@ const ChildForTest = ({
 )
 
 const meta: Meta = {
-  title: 'atom/BooleanContainer',
   component: BooleanContainer,
   args: {
     children: <ChildForTest>Default</ChildForTest>,

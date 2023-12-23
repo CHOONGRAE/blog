@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react'
 import Text from './index'
 
 const meta: Meta<typeof Text> = {
-  title: 'atom/Text',
   component: Text,
   args: {
     children:
