@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components'
+import makeCommonStyles from '@/styles/common'
 
 type PossibleAs =
   | 'h1'
@@ -40,37 +41,21 @@ export const Text = styled.p<Props>`
     $padding,
     $truncate,
     $truncateLines,
-  }) => {
-    return css`
-      font-size: var(--${$variant || defaultVariant(as)});
-      color: ${$color || '#222'};
-      margin: ${makeMarginOrPadding($margin) || '0px'};
-      padding: ${makeMarginOrPadding($padding)};
-      ${$truncate &&
-      css`
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: -webkit-box;
-        -webkit-line-clamp: ${$truncateLines || 1};
-        -webkit-box-orient: vertical;
-      `}
-    `
-  }}
+  }) => css`
+    ${makeCommonStyles({ $margin: $margin || '0', $padding })}
+    font-size: var(--${$variant || defaultVariant(as)});
+    color: ${$color || '#222'};
+    ${$truncate &&
+    css`
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: ${$truncateLines || 1};
+      -webkit-box-orient: vertical;
+    `}
+  `}
 `
-
-const makeMarginOrPadding: (value: string | undefined) => string = (value) => {
-  const convertedValue = value
-    ? value
-        .trim()
-        .replace(/[^\d\s]/g, '')
-        .split(/\s{1,}/)
-        .slice(0, 4)
-        .map((n) => Number(n) * 4 + 'px')
-    : []
-
-  return convertedValue.join(' ')
-}
 
 const defaultVariant: (as: PossibleAs | undefined) => PossibleVariant = (
   as,
