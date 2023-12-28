@@ -1,10 +1,11 @@
 {
-  "name": "ui",
+  "name": "@web/ui",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "style": "./dist/stylex.css",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -22,7 +23,11 @@
     "@storybook/react": "^7.6.6",
     "@storybook/react-vite": "^7.6.6",
     "@storybook/test": "^7.6.6",
+    "@stylexjs/babel-plugin": "^0.3.0",
+    "@stylexjs/rollup-plugin": "^0.3.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "rollup-plugin-preserve-directives": "^0.2.0",
     "storybook": "^7.6.6",
     "vite": "^4.5.1",
@@ -32,5 +37,8 @@
   "peerDependencies": {
     "react": "^18",
     "styled-components": "^6.1.3"
+  },
+  "dependencies": {
+    "@stylexjs/stylex": "^0.3.0"
   }
 }

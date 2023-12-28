@@ -8,9 +8,10 @@ interface TextProps extends S.Props {
 
 const Text = ({ children, ...args }: TextProps) => {
   return (
-    <S.Text as={args.$as} {...args}>
-      {children}
-    </S.Text>
+    // <S.Text as={args.$as} {...args}>
+    //   {children}
+    // </S.Text>
+    <p {...S.test(args.$as)}>{children}</p>
   )
 }
 

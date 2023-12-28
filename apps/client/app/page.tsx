@@ -1,29 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import { Text, BooleanContainer } from 'ui'
-
-const ChildForTest = (props: {
-  children?: React.ReactNode
-  [key: string]: React.ReactNode
-}) => {
-  console.log(props)
-  return (
-    <div style={{ whiteSpace: 'pre-wrap' }}>
-      {props.my_props}
-      {props.children}
-      {/* {Object.entries(props).map(([k, v]) => `\n${k}: ${v}`)} */}
-      {Object.keys(props).map((key) => `\n${key}:${props[key]}`)}
-    </div>
-  )
-}
+import { Text } from '@web/ui'
 
 export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <BooleanContainer propName="my_props" init={true}>
-          <ChildForTest />
-        </BooleanContainer>
         <Text $as="h3" $color="#f99" $truncate>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>

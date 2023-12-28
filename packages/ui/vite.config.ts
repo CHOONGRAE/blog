@@ -1,11 +1,39 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import tsconfig from 'vite-tsconfig-paths'
-import dts from 'vite-plugin-dts'
+import { defineConfig, UserConfig } from 'vite'
 import { resolve } from 'path'
+import tsconfig from 'vite-tsconfig-paths'
+import react_dev from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
+import dts from 'vite-plugin-dts'
 import directives from 'rollup-plugin-preserve-directives'
+// @ts-ignore
+import rollupStylex from '@stylexjs/rollup-plugin'
 
-export default defineConfig({
+const defaultConfig: UserConfig = {
+  assetsInclude: ['/sb-preview/runtime.js'],
+  plugins: [
+    tsconfig({
+      projects: ['./tsconfig.json'],
+    }),
+    react_dev({
+      babel: {
+        plugins: [
+          [
+            '@stylexjs/babel-plugin',
+            {
+              dev: process.env.NODE_ENV === 'development',
+              unstable_moduleResolution: {
+                type: 'commonJS',
+                rootDir: __dirname,
+              },
+            },
+          ],
+        ],
+      },
+    }),
+  ],
+}
+
+const buildConfig: UserConfig = {
   plugins: [
     react(),
     dts({
@@ -15,9 +43,9 @@ export default defineConfig({
         '**/*.stories.tsx',
         '**/*.test.ts',
         '**/*.test.tsx',
+        'vite.config.ts',
       ],
     }),
-    tsconfig(),
     directives(),
   ],
   build: {
@@ -26,7 +54,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'index.ts'),
       name: 'ui',
       formats: ['es'],
-      fileName: (_, entry) => `${entry}.js`,
+      fileName: (_, entry) => `${entry.replace('packages/ui/', '')}.js`,
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime', 'styled-components'],
@@ -35,10 +63,10 @@ export default defineConfig({
           react: 'React',
           'styled-components': 'styled',
         },
-        // banner: `'use client'`,
-        // interop: 'compat',
         preserveModules: true,
       },
+      // @ts-ignore
+      plugins: [rollupStylex()],
     },
     sourcemap: true,
     emptyOutDir: true,
@@ -48,4 +76,8 @@ export default defineConfig({
       '@': resolve(__dirname, './'),
     },
   },
-})
+}
+
+export default defineConfig(
+  process.env.NODE_ENV === 'production' ? buildConfig : defaultConfig,
+)

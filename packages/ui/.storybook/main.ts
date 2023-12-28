@@ -1,6 +1,4 @@
 import type { StorybookConfig } from '@storybook/react-vite'
-import tsconfig from 'vite-tsconfig-paths'
-import fs from 'fs'
 
 const config: StorybookConfig = {
   stories: [
@@ -19,10 +17,5 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: (config) => ({
-    ...config,
-    assetsInclude: ['/sb-preview/runtime.js'],
-    plugins: [...(config.plugins || []), tsconfig()],
-  }),
 }
 export default config

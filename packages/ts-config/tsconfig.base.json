@@ -1,0 +1,127 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+
+  "compilerOptions": {
+    // Type Checking
+    // "allowUnreachableCode": true,
+    // "allowUnusedLabels": true,
+    "exactOptionalPropertyTypes": true, // Recommended
+    "noFallthroughCasesInSwitch": true,
+    "strict": true, // Recommended,
+    // "alwaysStrict": true, // Recommended, Default: true if "strict"
+    // "strictNullChecks": true, // Recommended, Default: true if "strict"
+    // "strictBindCallApply": true, // Recommended, Default: true if "strict"
+    // "strictFunctionTypes": true, // Recommended, Default: true if "strict"
+    // "strictPropertyInitialization": true, // Recommended, Default: true if "strict"
+    // "noImplicitAny": true, // Recommended, Default: true if "strict"
+    // "noImplicitThis": true, // Recommended, Default: true if "strict"
+    // "useUnknownInCatchVariables": true, // Recommended, Default: true if "strict"
+    // "noImplicitOverride": false,
+    // "noImplicitReturns": false,
+    // "noPropertyAccessFromIndexSignature": false,
+    // "noUncheckedIndexedAccess": false,
+    // "noUnusedLocals": false,
+    // "noUnusedParameters": false,
+
+    // Modules
+    // "allowArbitraryExtensions": false,
+    // "allowImportingTsExtensions": false,
+    // "allowUmdGlobalAccess": false,
+    // "baseUrl": ".",
+    // "customConditions": [],
+    // "module": "", // Default CommonJS if "target" is ES3 or ES5
+    "moduleResolution": "Node", // Default Classic if "module" is AMD, UMD, System, or ES6/ES2015
+    //                          // Matches if "module" is node16 or nodenext
+    //                          // Node otherwise
+    // "moduleSuffixes": []
+    // "noResolve": false,
+    // "paths": {},
+    "resolveJsonModule": true,
+    // "resolvePackageJsonExports": false, // Default true when "moduleResolution is node16, nodenext, or bundler
+    // "resolvePackageJsonImports": false, // Default true when "moduleResolution is node16, nodenext, or bundler
+    // "rootDir": "",
+    // "rootDirs": [],
+    // "typeRoots": [],
+    // "types": [],
+
+    // Emit
+    "declaration": true,
+    // "declarationDir": "",
+    // "declarationMap": false,
+    // "downlevelIteration": false,
+    // "emitBOM": false,
+    // "emitDeclarationOnly": false,
+    // "importHelpers": false,
+    // "importsNotUsedAsValues": "remove",
+    // "inlineSourceMap": false,
+    // "inlineSources": false,
+    // "mapRoot": "",
+    // "newLine": "",
+    // "noEmit": false,
+    // "noEmitHelpers": false,
+    // "noEmitOnError": false,
+    // "outDir": "",
+    // "outFile": "",
+    // "preserveConstEnums": false, // Default true if "isolatedModules"
+    // "preserveValueImports": false,
+    "removeComments": true,
+    // "sourceMap": true,
+    // "sourceRoot": "",
+    // "stripInternal": ,
+
+    // JavaScript Support
+    // "allowJs": false,
+    // "checkJs": false,
+    // "maxNodeModuleJsDepth": 0,
+
+    // Editor Support
+    // "disableSizeLimit": false,
+    // "plugins": [],
+
+    // Interop Constraints
+    "allowSyntheticDefaultImports": true, // Default true if "esModuleInterop", "module" is system, or "moduleResolution is bundler
+    "esModuleInterop": true, // Recommended, Default true if "module" is node16 or nodenext
+    "forceConsistentCasingInFileNames": true, // Recomended, Default true
+    // "isolatedModules": false,
+    // "preserveSymlinks": false,
+    // "verbatimModuleSyntax": false,
+
+    // Backwards Compatiblity
+    // "noImplicitUseStrict": false,
+    // "noStrictGenericChecks": false,
+    // "suppressExcessPropertyErrors": false,
+    // "suppressImplicitAnyIndexErrors": false,
+
+    // Language And Environment
+    // "emitDecoratorMetadata": false,
+    // "experimentalDecorators": false,
+    // "jsx": "preserve",
+    // "jsxFactory": "React.createElement",
+    // "jsxFragmentFactory": "React.Fragment",
+    // "jsxImportSource": "react",
+    // "lib": [],
+    // "moduleDetection": "auto",
+    // "noLib": false,
+    // "reactNamespace": "React",
+    "target": "ESNext", // Default ES3
+    // "useDefineForClassFields": true, // Default: true if "target" is ES2022 or higher, including ESNext
+
+    // Compiler Diagnostics - 컴파일 로그에 이거저거 표시해주는 옵션들인데 쓸일이 있을까...
+
+    // Projects
+    // "composite": true,
+    // "disableReferencedProjectLoad": false,
+    // "disableSolutionSearching": false,
+    // "disableSourceOfProjectReferenceRedirect": false,
+    "incremental": true, // Default true if "composite"
+    // "tsBuildInfoFile": ".tsbuildinfo",
+
+    // Output Formmatting
+    "noErrorTruncation": true,
+    // "preserveWatchOutput": false,
+    // "pretty": true,
+
+    // Completeness
+    "skipLibCheck": true // Recommended
+  }
+}

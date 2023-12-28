@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./base.json",
+
+  "compilerOptions": {
+    // Modules
+    "module": "CommonJS",
+
+    //Language And Envirnment
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  }
+}

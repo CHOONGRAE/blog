@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "./tsconfig.base.json",
+
+  "compilerOptions": {
+    // Modules
+    "module": "ESNext",
+
+    // Emit
+    "noEmit": true,
+
+    // JavaScript Support
+    "allowJs": true,
+
+    // Interop Constraints
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "isolatedModules": true,
+
+    // Language And Environment
+    "jsx": "preserve"
+  }
+}
