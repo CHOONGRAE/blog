@@ -7,7 +7,7 @@
     // "allowUnusedLabels": true,
     "exactOptionalPropertyTypes": true, // Recommended
     "noFallthroughCasesInSwitch": true,
-    "strict": true, // Recommended,
+    "strict": true, // Recommended
     // "alwaysStrict": true, // Recommended, Default: true if "strict"
     // "strictNullChecks": true, // Recommended, Default: true if "strict"
     // "strictBindCallApply": true, // Recommended, Default: true if "strict"
