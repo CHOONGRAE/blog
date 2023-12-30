@@ -28,8 +28,5 @@
     "vite": "^4.5.1",
     "vite-plugin-dts": "^3.7.0",
     "vite-tsconfig-paths": "^4.2.2"
-  },
-  "peerDependencies": {
-    "styled-components": "^6.1.4"
   }
 }
