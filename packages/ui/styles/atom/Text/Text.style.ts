@@ -1,19 +1,7 @@
 import styled, { css } from 'styled-components'
 import { makeCommonStyles, MarginAndPaddingProps } from '@/styles/common'
 
-type PossibleAs =
-  | 'h1'
-  | 'h2'
-  | 'h3'
-  | 'h4'
-  | 'p'
-  | 'b'
-  | 'i'
-  | 'span'
-  | 'label'
-  | 'strong'
-
-type PossibleVariant =
+export type PossibleVariant =
   | 'title-xl'
   | 'title-lg'
   | 'title-md'
@@ -23,7 +11,6 @@ type PossibleVariant =
   | 'p-small'
 
 export interface Props extends MarginAndPaddingProps {
-  $as?: PossibleAs
   $variant?: PossibleVariant
   $color?: string
   $truncate?: boolean
@@ -31,17 +18,9 @@ export interface Props extends MarginAndPaddingProps {
 }
 
 export const Text = styled.p<Props>`
-  ${({
-    $as,
-    $variant,
-    $color,
-    $margin,
-    $padding,
-    $truncate,
-    $truncateLines,
-  }) => css`
+  ${({ $variant, $color, $margin, $padding, $truncate, $truncateLines }) => css`
     ${makeCommonStyles({ $margin: $margin || '0', $padding })}
-    font-size: var(--${$variant || defaultVariant($as)});
+    font-size: var(--${$variant});
     color: ${$color || '#222'};
     ${$truncate &&
     css`
@@ -54,20 +33,3 @@ export const Text = styled.p<Props>`
     `}
   `}
 `
-
-const defaultVariant: (as: PossibleAs | undefined) => PossibleVariant = (
-  as,
-) => {
-  switch (as) {
-    case 'h1':
-      return 'title-xl'
-    case 'h2':
-      return 'title-lg'
-    case 'h3':
-      return 'title-md'
-    case 'h4':
-      return 'title-sm'
-    default:
-      return 'p-base'
-  }
-}

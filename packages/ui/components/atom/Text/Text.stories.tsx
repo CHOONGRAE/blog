@@ -15,7 +15,7 @@ const meta: Meta<typeof Text> = {
     children: {
       description: 'Text or ReactNode',
     },
-    $as: {
+    as: {
       description: 'To Make Elem',
     },
     $variant: {
@@ -49,29 +49,29 @@ export const Default: Story = {}
 export const ExampleForAs: Story = {
   render: () => (
     <>
-      <Text $as={'h1'}>h1: Lorem ipsum dolor</Text>
+      <Text as={'h1'}>h1: Lorem ipsum dolor</Text>
       <br />
-      <Text $as={'h2'}>h2: Lorem ipsum dolor</Text>
+      <Text as={'h2'}>h2: Lorem ipsum dolor</Text>
       <br />
-      <Text $as={'h3'}>h3: Lorem ipsum dolor</Text>
+      <Text as={'h3'}>h3: Lorem ipsum dolor</Text>
       <br />
-      <Text $as={'h4'}>h4: Lorem ipsum dolor</Text>
+      <Text as={'h4'}>h4: Lorem ipsum dolor</Text>
       <br />
       <Text>p(default): Lorem ipsum dolor</Text>
       <br />
-      <Text $as={'b'}>b: Lorem ipsum dolor</Text>
+      <Text as={'b'}>b: Lorem ipsum dolor</Text>
       <br />
       <br />
-      <Text $as={'i'}>i: Lorem ipsum dolor</Text>
+      <Text as={'i'}>i: Lorem ipsum dolor</Text>
       <br />
       <br />
-      <Text $as={'span'}>span: Lorem ipsum dolor</Text>
+      <Text as={'span'}>span: Lorem ipsum dolor</Text>
       <br />
       <br />
-      <Text $as={'label'}>label: Lorem ipsum dolor</Text>
+      <Text as={'label'}>label: Lorem ipsum dolor</Text>
       <br />
       <br />
-      <Text $as={'strong'}>strong: Lorem ipsum dolor</Text>
+      <Text as={'strong'}>strong: Lorem ipsum dolor</Text>
     </>
   ),
 }

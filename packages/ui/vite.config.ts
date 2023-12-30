@@ -1,12 +1,9 @@
 import { defineConfig, UserConfig } from 'vite'
 import { resolve } from 'path'
 import tsconfig from 'vite-tsconfig-paths'
-import react_dev from '@vitejs/plugin-react'
 import react from '@vitejs/plugin-react-swc'
 import dts from 'vite-plugin-dts'
 import directives from 'rollup-plugin-preserve-directives'
-// @ts-ignore
-import rollupStylex from '@stylexjs/rollup-plugin'
 
 const defaultConfig: UserConfig = {
   assetsInclude: ['/sb-preview/runtime.js'],
@@ -14,22 +11,7 @@ const defaultConfig: UserConfig = {
     tsconfig({
       projects: ['./tsconfig.json'],
     }),
-    react_dev({
-      babel: {
-        plugins: [
-          [
-            '@stylexjs/babel-plugin',
-            {
-              dev: process.env.NODE_ENV === 'development',
-              unstable_moduleResolution: {
-                type: 'commonJS',
-                rootDir: __dirname,
-              },
-            },
-          ],
-        ],
-      },
-    }),
+    react(),
   ],
 }
 
@@ -49,7 +31,6 @@ const buildConfig: UserConfig = {
     directives(),
   ],
   build: {
-    ssr: false,
     lib: {
       entry: resolve(__dirname, 'index.ts'),
       name: 'ui',
@@ -65,8 +46,6 @@ const buildConfig: UserConfig = {
         },
         preserveModules: true,
       },
-      // @ts-ignore
-      plugins: [rollupStylex()],
     },
     sourcemap: true,
     emptyOutDir: true,

@@ -1,12 +1,10 @@
-import { css } from 'styled-components'
-
 export interface WidthAndHeightProps {
-  $width?: string | number
-  $min_height?: string | number
-  $max_height?: string | number
-  $height?: string | number
-  $min_width?: string | number
-  $max_width?: string | number
+  $width?: string | number | undefined
+  $min_height?: string | number | undefined
+  $max_height?: string | number | undefined
+  $height?: string | number | undefined
+  $min_width?: string | number | undefined
+  $max_width?: string | number | undefined
 }
 
 export const makeWidthOrHeight = (value: string | number | undefined) => {

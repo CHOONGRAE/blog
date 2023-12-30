@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "devDependencies": {
-    "styled-components": "^6.1.4"
   },
   "dependencies": {
     "@lib/styled-components-registry": "workspace:^",
-    "@web/ui": "workspace:^"
+    "@web/ui": "workspace:^",
+    "styled-components": "^6.1.4"
   }
 }

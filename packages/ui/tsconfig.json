@@ -8,6 +8,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.style.ts"],
   "exclude": ["node_modules"]
 }

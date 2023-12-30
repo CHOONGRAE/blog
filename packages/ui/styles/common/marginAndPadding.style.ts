@@ -1,8 +1,6 @@
-import { css } from 'styled-components'
-
 export interface MarginAndPaddingProps {
-  $margin?: string
-  $padding?: string
+  $margin?: string | undefined
+  $padding?: string | undefined
 }
 
 export const makeMarginOrPadding = (value: string | undefined) => {
