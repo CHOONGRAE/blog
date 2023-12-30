@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from '@lib/styled-components-registry'
-import globalFonts from '../lib/fonts'
+import defaultFonts from '@lib/fonts/nextjs/defaultFonts'
 
 import '@/styles/globals/index.css'
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={globalFonts.className}>
+      <body className={defaultFonts.className}>
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

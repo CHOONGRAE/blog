@@ -1,0 +1,14 @@
+@font-face {
+  font-family: defaultFont;
+  src: url('../public/Pretendard/Pretendard-Regular.woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: defaultFont;
+  src: url('../public/Pretendard/Pretendard-Bold.woff2');
+  font-weight: 700;
+}
+
+body {
+  font-family: defaultFont;
+}

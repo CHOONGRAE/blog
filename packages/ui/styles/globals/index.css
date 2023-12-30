@@ -1,2 +1,3 @@
 @import './normalize.css';
 @import './fonts.css';
+@import '@lib/fonts/css/defaultFonts.css';

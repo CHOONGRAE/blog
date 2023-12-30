@@ -11,6 +11,7 @@
   "devDependencies": {
   },
   "dependencies": {
+    "@lib/fonts": "workspace:^",
     "@lib/styled-components-registry": "workspace:^",
     "@web/ui": "workspace:^",
     "styled-components": "^6.1.4"

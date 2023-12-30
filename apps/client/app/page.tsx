@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <Text $as="h3" $color="#f99" $truncate>
+        <Text as="h3" $color="#f99" $truncate>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </Text>

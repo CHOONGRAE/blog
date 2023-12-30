@@ -1,0 +1,14 @@
+@font-face {
+  font-family: codingFont;
+  src: url('../public/EliceDigitalCoding/EliceDigitalCodingverH_Regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: codingFont;
+  src: url('../public/EliceDigitalCoding/EliceDigitalCodingverH_Bold.ttf');
+  font-weight: 700;
+}
+
+.codingFont {
+  font-family: codingFont;
+}

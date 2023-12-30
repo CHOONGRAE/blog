@@ -2,8 +2,6 @@
   "extends": "@setting/ts-config/tsconfig.react.json",
 
   "compilerOptions": {
-    "declaration": true,
-    "typeRoots": ["./dist/index.d.ts"],
     "paths": {
       "@/*": ["./*"]
     }
