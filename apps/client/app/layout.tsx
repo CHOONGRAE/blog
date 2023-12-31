@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import StyledComponentsRegistry from '@lib/styled-components-registry'
 import defaultFonts from '@lib/fonts/nextjs/defaultFonts'
-
-import '@/styles/globals/index.css'
+import GlobalStyle from '@web/ui'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={defaultFonts.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <GlobalStyle />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )

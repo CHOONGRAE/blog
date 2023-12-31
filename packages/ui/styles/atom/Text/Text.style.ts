@@ -11,16 +11,24 @@ export type PossibleVariant =
   | 'p-small'
 
 export interface Props extends MarginAndPaddingProps {
-  $variant?: PossibleVariant
+  $variant: PossibleVariant
   $color?: string
   $truncate?: boolean
   $truncateLines?: number
 }
 
 export const Text = styled.p<Props>`
-  ${({ $variant, $color, $margin, $padding, $truncate, $truncateLines }) => css`
+  ${({
+    theme,
+    $variant,
+    $color,
+    $margin,
+    $padding,
+    $truncate,
+    $truncateLines,
+  }) => css`
     ${makeCommonStyles({ $margin: $margin || '0', $padding })}
-    font-size: var(--${$variant});
+    font-size: ${theme[$variant]};
     color: ${$color || '#222'};
     ${$truncate &&
     css`

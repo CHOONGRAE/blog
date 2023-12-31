@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
+  compiler: {
+    styledComponents: true,
+  },
   async rewrites() {
     console.log(process.env.NODE_ENV)
     if (process.env.NODE_ENV !== 'production') {

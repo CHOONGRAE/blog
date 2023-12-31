@@ -2,6 +2,8 @@
 
 import React from 'react'
 import * as S from '@/styles/atom/Text'
+import { ThemeProvider } from 'styled-components'
+import { fontSize } from '@/styles/theme'
 
 type PossibleAs =
   | 'h1'
@@ -15,14 +17,16 @@ type PossibleAs =
   | 'label'
   | 'strong'
 
-interface TextProps extends S.Props {
+interface TextProps extends Partial<S.Props> {
   children?: React.ReactNode
   as?: PossibleAs
 }
 
-const Text = ({ as = 'p', $variant, ...props }: TextProps) => {
-  return <S.Text as={as} $variant={$variant || defaultVariant(as)} {...props} />
-}
+const Text = ({ as = 'p', $variant, ...props }: TextProps) => (
+  <ThemeProvider theme={fontSize}>
+    <S.Text as={as} $variant={$variant || defaultVariant(as)} {...props} />
+  </ThemeProvider>
+)
 
 export default Text
 
