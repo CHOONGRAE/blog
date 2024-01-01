@@ -4,6 +4,7 @@
   "private": true,
   "types": "./dist/index.d.ts",
   "module": "./dist/index.js",
+  "type": "module",
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

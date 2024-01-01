@@ -10,7 +10,12 @@ module.exports = {
   parserOptions: {
     project: true,
   },
+  env: {
+    browser: true,
+    node: true,
+    jest: true,
+  },
   root: true,
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.*'],
   reportUnusedDisableDirectives: true,
 }

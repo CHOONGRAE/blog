@@ -4,8 +4,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"]
-    }
+    },
+    "jsx": "react-jsx"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", ".eslintrc.cjs"],
   "exclude": ["node_modules"]
 }

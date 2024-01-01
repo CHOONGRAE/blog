@@ -1,10 +1,6 @@
 module.exports = {
   $schema: 'https://json.schemastore.org/eslintrc',
   extends: ['./base'],
-  env: {
-    node: true,
-    jest: true,
-  },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',

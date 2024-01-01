@@ -79,9 +79,9 @@ export const ExampleForAs: Story = {
 export const ExampleForStyles: Story = {
   render: () => (
     <>
-      <Text $variant={'p-large'}>$variant: p-large</Text>
+      <Text $variant={'p-large'}>$variant: p-large - 1.8rem</Text>
       <br />
-      <Text $variant={'p-small'}>$variant: p-small</Text>
+      <Text $variant={'p-small'}>$variant: p-small - 1.4rem</Text>
       <br />
       <Text $color={'#f99'}>$color: #f99</Text>
       <br />

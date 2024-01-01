@@ -1,6 +1,6 @@
 'use client'
 
-import { Children, cloneElement, useState } from 'react'
+import { Children, useState } from 'react'
 import * as S from '@/styles/atom/BooleanContainer'
 import React from 'react'
 
@@ -27,9 +27,6 @@ const BooleanContainer = ({
     key: onlyChild.key,
     ya: boolean,
   })
-
-  console.log(childWithProps)
-  console.log(childWithProps.props[propName])
 
   return (
     <S.BooleanConainer onClick={clickHandler} {...args}>

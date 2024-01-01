@@ -56,7 +56,7 @@ describe('Test Stories', () => {
       expect(variant).toBeInTheDocument()
       expect(variant).toHaveStyleRule(
         'font-size',
-        `var(--${variant.textContent?.replace('$variant: ', '')})`,
+        `${variant.textContent?.split(' - ')[1]}`,
       )
     })
 
