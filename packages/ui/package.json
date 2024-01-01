@@ -9,7 +9,11 @@
     "build-storybook": "storybook build",
     "lint": "eslint \"{stories,styles,.storybook}/**/*.ts\" --fix",
     "build": "vite build",
-    "prepare": "vite build"
+    "prepare": "vite build",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:ci": "jest --ci"
   },
   "keywords": [],
   "author": "",

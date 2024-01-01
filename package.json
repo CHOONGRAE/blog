@@ -10,11 +10,7 @@
     "@client": "pnpm --filter @web/client",
     "@server": "pnpm --filter @web/server",
     "@ui": "pnpm --filter @web/ui",
-    "prepare": "husky install",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:ci": "jest --ci"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@setting/ts-config": "workspace:^",
